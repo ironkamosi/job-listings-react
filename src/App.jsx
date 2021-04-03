@@ -1,15 +1,13 @@
-import React,{useState} from "react"
+import React from "react"
 import './App.css';
 import data from "./data.json"
 import JobListing from "./JobListing.jsx"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [jobData, setJobData] = useState(data)
-  
-  return (
+    return (
     <div>
-      <JobListing jobListingData={jobData} />
+      <JobListing jobListingData={data} />
     </div>
   );
 }

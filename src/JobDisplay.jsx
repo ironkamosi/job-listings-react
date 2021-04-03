@@ -1,7 +1,9 @@
-import {Badge,Media } from "react-bootstrap";
-
+import { Media} from "react-bootstrap";
+import JobLanguages from "./JobLanguages.jsx";
+import Featured from "./Featured.jsx"
 const JobDisplay = (props) => {
-    console.log(props.jobInfo)
+  // console.log(props.jobInfo.languages);
+  let jobLanguages = props.jobInfo.languages;
   return (
     <Media>
       <img
@@ -14,30 +16,18 @@ const JobDisplay = (props) => {
       <Media.Body>
         <h5>{props.jobInfo.company}</h5>
         <p>{props.jobInfo.position}</p>
+        <div>
+          {/* {jobLanguages.map((language, index) => { 
+            return <Badge key={index} variant="info">{language}</Badge>
+          })} */}
+          <JobLanguages jobAttributes={jobLanguages} />
+        </div>
 
-              <div>
-                  {/* {props.jobInfo.language.map(())} */}
-          <Badge variant="primary">{props.jobInfo.language}</Badge>{" "}
-          <Badge variant="secondary">{props.jobInfo.language}</Badge>{" "}
-          <Badge variant="success">Success</Badge>{" "}
-          <Badge variant="danger">Danger</Badge>{" "}
-          <Badge variant="warning">Warning</Badge>{" "}
-          <Badge variant="info">Info</Badge>{" "}
-          <Badge variant="light">Light</Badge>{" "}
-          <Badge variant="dark">Dark</Badge>
+        <div>
+          <Featured />
         </div>
       </Media.Body>
     </Media>
   );
 };
 export default JobDisplay;
-
-//  data.map((element, index) => {
-//    element.company;
-//    element.logo;
-//    element.new;
-//    element.feature;
-//    element.position;
-//    element.postedAt;
-//    element.language;
-//  });

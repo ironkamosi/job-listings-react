@@ -1,5 +1,18 @@
-import JobDisplay from "./JobDisplay.jsx";
+import { Badge} from "react-bootstrap";
+
 const JobLanguages = (props) => {
-  return props.JobDisplay.jobInfo.map((language, index));
-};
-export default JobLanguages;
+  return (
+    <div>
+      {props.jobAttributes.map((language, index) => {
+        return (
+          <div key={index}>
+            <Badge variant="info">{language}</Badge>
+          </div>
+        );
+      })}
+    </div>
+  )
+}
+
+export default JobLanguages 
+
