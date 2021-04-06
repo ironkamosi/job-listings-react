@@ -1,0 +1,12 @@
+.job-display{
+align-items: center;
+}
+
+.jobDisplay-col1{
+display:flex;
+}
+
+.m-info{
+padding-top: 2em;
+
+}

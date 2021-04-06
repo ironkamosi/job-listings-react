@@ -1,33 +1,55 @@
-import { Media} from "react-bootstrap";
+import { Badge,Container, Col, Row } from "react-bootstrap";
 import JobLanguages from "./JobLanguages.jsx";
-import Featured from "./Featured.jsx"
-const JobDisplay = (props) => {
-  // console.log(props.jobInfo.languages);
-  let jobLanguages = props.jobInfo.languages;
+import Featured from "./Featured.jsx";
+import JobTools from "./JobTools.jsx";
+import New from "./New.jsx";
+import MiscellaneousInfo from "./MiscellaneousInfo.jsx";
+import "./JobDisplay.css";
+const JobDisplay = ({ jobInfo }) => {
   return (
-    <Media>
-      <img
-        width={64}
-        height={64}
-        className="mr-3"
-        src={props.jobInfo.logo}
-        alt="Generic placeholder"
-      />
-      <Media.Body>
-        <h5>{props.jobInfo.company}</h5>
-        <p>{props.jobInfo.position}</p>
-        <div>
-          {/* {jobLanguages.map((language, index) => { 
-            return <Badge key={index} variant="info">{language}</Badge>
-          })} */}
-          <JobLanguages jobAttributes={jobLanguages} />
-        </div>
+    <Container className="jobDisplay-Row">
+      <Row>
+        <Col xl={1.9}>
+          <img
+            width={88}
+            height={88}
+            className="mr-3"
+            src={jobInfo.logo}
+            alt="Generic placeholder"
+          />
+        </Col>
 
-        <div>
-          <Featured />
-        </div>
-      </Media.Body>
-    </Media>
+        <Col xl={4}>
+          <Row>
+            <h6>{jobInfo.company}</h6> <New newJob={jobInfo.new} />{" "}
+            <Featured featuredJob={jobInfo.featured} />
+          </Row>
+
+          <Row>{jobInfo.position}</Row>
+
+          <Row>
+            <MiscellaneousInfo data={jobInfo} />
+          </Row>
+        </Col>
+
+        <Col xl={6}>
+          <Row className="m-info">
+            <Badge variant="info">{jobInfo.role}</Badge>
+            <Badge variant="info">{jobInfo.level}</Badge>
+            <JobLanguages languages={jobInfo.languages} />
+            <JobTools tools={jobInfo.tools} />
+          </Row>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 export default JobDisplay;
+
+/* {jobLanguages.map((language, index) => { 
+            return <Badge key={index} variant="info">{language}</Badge>
+          })} */
+
+/* <div>
+          <JobList />
+        </div> */

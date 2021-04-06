@@ -1,0 +1,12 @@
+.jobListing-container {
+  padding: 0 10%;
+  background-color: black;
+}
+
+.jobListing-main{
+padding-top: 2em;
+padding-bottom: 2em;
+background-color: hsl(180, 52%, 96%);
+margin-bottom: 1.5em;  
+border-radius: 7px;
+}

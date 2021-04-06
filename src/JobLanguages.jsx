@@ -1,16 +1,14 @@
 import { Badge} from "react-bootstrap";
-
+import "./JobLanguages.css"
 const JobLanguages = (props) => {
   return (
-    <div>
-      {props.jobAttributes.map((language, index) => {
+      props.languages.map((language, index) => {
         return (
-          <div key={index}>
-            <Badge variant="info">{language}</Badge>
-          </div>
+            <Badge key={index} className="m-language"variant="info">{language}</Badge>
         );
-      })}
-    </div>
+      })
+
+
   )
 }
 
