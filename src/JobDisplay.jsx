@@ -1,6 +1,6 @@
-import { Badge,Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import JobLanguages from "./JobLanguages.jsx";
-import Featured from "./Featured.jsx";
+import Badge from "./Badge.jsx"
 import JobTools from "./JobTools.jsx";
 import New from "./New.jsx";
 import MiscellaneousInfo from "./MiscellaneousInfo.jsx";
@@ -21,11 +21,14 @@ const JobDisplay = ({ jobInfo }) => {
 
         <Col xl={4}>
           <Row>
-            <h6>{jobInfo.company}</h6> <New newJob={jobInfo.new} />{" "}
-            <Featured featuredJob={jobInfo.featured} />
+            <h3 className="company-name">{jobInfo.company}</h3>{" "}
+            {jobInfo.new && <New text="NEW!" />}
+            {jobInfo.featured && <New text="FEATURE" dark/>}
           </Row>
 
-          <Row>{jobInfo.position}</Row>
+          <Row>
+            <h2 className="job-position">{jobInfo.position}</h2>
+          </Row>
 
           <Row>
             <MiscellaneousInfo data={jobInfo} />
@@ -34,8 +37,10 @@ const JobDisplay = ({ jobInfo }) => {
 
         <Col xl={6}>
           <Row className="m-info">
-            <Badge variant="info">{jobInfo.role}</Badge>
-            <Badge variant="info">{jobInfo.level}</Badge>
+            <Badge text={jobInfo.role} />
+            <Badge text={jobInfo.level}/>
+            {/* <Badge variant="info">{jobInfo.role}</Badge>
+            <Badge variant="info">{jobInfo.level}</Badge> */}
             <JobLanguages languages={jobInfo.languages} />
             <JobTools tools={jobInfo.tools} />
           </Row>

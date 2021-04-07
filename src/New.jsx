@@ -1,6 +1,6 @@
-import { Badge } from "react-bootstrap";
-
-const New = ({ newJob }) => {
+// import { Badge } from "react-bootstrap";
+import "./New.css"
+const New = ({ text,dark }) => {
   //   return featuredJob ? (
   //     <Badge pill variant="secondary">
   //       {" "}
@@ -9,15 +9,12 @@ const New = ({ newJob }) => {
   //   ) : (
   //     <></>
   //   );
-  if (newJob === true) {
-    return (
-      <Badge pill variant="secondary">
-        NEW
-      </Badge>
-    );
-  } else {
-    return <></>;
-  }
+  // pill variant="secondary"
+  // if (newJob === true) {
+  return <div className={`new-badge ${dark && "dark"}`}><p>{text}</p></div>;
+  // } else {
+  //   return null
+  // }
 };
 
 export default New;

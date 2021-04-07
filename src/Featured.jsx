@@ -1,24 +1,24 @@
-import { Badge } from "react-bootstrap";
-
+// import { Badge } from "react-bootstrap";
+import "./Feature.css"
 const Featured = ({ featuredJob }) => {
-//   return featuredJob ? (
-//     <Badge pill variant="secondary">
-//       {" "}
-//       Secondary
-//     </Badge>
-//   ) : (
-//     <></>
-//   );
-   if (featuredJob === true) {
-      return (
-        <Badge pill variant="secondary">
-          FEATURED
-        </Badge>
-      )
-   } else {
-   return <></>;
-}
- 
+  //   return featuredJob ? (
+  //     <Badge pill variant="secondary">
+  //       {" "}
+  //       Secondary
+  //     </Badge>
+  //   ) : (
+  //     <></>
+  //   );
+  //pill variant="secondary"
+  if (featuredJob === true) {
+    return (
+      <div className="feature-pill">
+        <p>FEATURED</p>
+      </div>
+    );
+  } else {
+    return <></>;
+  }
 };
 
 export default Featured;

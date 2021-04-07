@@ -1,12 +1,21 @@
-.job-display{
-align-items: center;
+.job-display {
+  align-items: center;
 }
 
-.jobDisplay-col1{
-display:flex;
+.jobDisplay-col1 {
+  display: flex;
 }
 
-.m-info{
-padding-top: 2em;
+.m-info {
+  padding-top: 2em;
+}
 
+.job-position{
+color:hsl(180, 14%, 20%);
+}
+.company-name {
+  font-family: "Spartan", sans-serif;
+  color:   hsl(180, 29%, 50%);
+  font-weight: 700;
+  font-size: 1.2em;
 }

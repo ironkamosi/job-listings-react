@@ -1,18 +1,15 @@
-/* .badge{
-padding-top: 1em;
-} */
-
-.feature-pill {
-  background-color: hsl(180, 14%, 20%);
+.new-badge {
+  background-color: hsl(180, 29%, 50%);
   border-radius: 12%;
   margin-left: 1em;
   border-radius: 999em; /* "pill hack" */
   margin-bottom: 1rem;
-  width: 110px;
+  min-width: 70px;
+  /* width: 70px; */
   height: 30px;
 }
 
-.feature-pill p {
+.new-badge p {
   text-align: center;
   padding-top: 0.3em;
   padding-bottom: 0.5em;
@@ -20,4 +17,10 @@ padding-top: 1em;
   color: rgb(255, 249, 249);
   font-weight: 600;
   font-size: 1em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+.dark{
+   background-color: hsl(180, 14%, 20%); 
 }

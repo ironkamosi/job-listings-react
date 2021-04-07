@@ -1,18 +1,31 @@
 ul {
   display: flex;
   margin: 0em;
-  padding:0em;
+  padding: 0em;
+  /* font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+  font-weight: 500;  */
 }
 
-li{
-margin: 0 1.3em;
+li {
+  margin: 0 1.3em;
+  font-family: "Spartan", sans-serif;
+  color: hsl(180, 8%, 52%);
+  font-weight: 500;
+  font-size: 15px;
 }
 
-ul li:first-child{
-list-style-type:none;
-margin-left: 0em;
+.job-position {
+  font-family: "Spartan", sans-serif;
+  color: hsl(180, 29%, 50%); 
+  font-weight: 700;
+  font-size: 1.3em;
+}
+ul li:first-child {
+  list-style-type: none;
+  margin-left: 0em;
 }
 
-p{
-    margin:0em;
+p {
+  margin: 0em;
 }

@@ -1,15 +1,19 @@
-import { Badge} from "react-bootstrap";
+import { Button} from "react-bootstrap";
 import "./JobLanguages.css"
+import Badge from "./Badge.jsx"
+
 const JobLanguages = (props) => {
-  return (
-      props.languages.map((language, index) => {
-        return (
-            <Badge key={index} className="m-language"variant="info">{language}</Badge>
-        );
-      })
+  return props.languages.map((language, index) => {
+    return (
+      <Badge key={index} text={language}/>
+      //className="m-language"
+      // <Button key={index} className="btn-language">
+      //   <p>{language}</p>
+      // </Button>
+    );
+  });
 
-
-  )
+  //variant="info"
 }
 
 export default JobLanguages 
