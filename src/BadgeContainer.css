@@ -1,0 +1,10 @@
+.btn-language {
+  height: 40px;
+  background-color: hsl(180, 31%, 95% ) !important;
+  margin-left: 1.5em;
+  pointer-events: none !important;
+  border: none !important;
+  color: hsl(180, 29%, 50%)  !important;
+  font-weight: 600  !important;
+}
+

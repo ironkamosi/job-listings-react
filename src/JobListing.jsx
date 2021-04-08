@@ -1,6 +1,5 @@
 import JobDisplay from "./JobDisplay.jsx";
 import "./JobListing.css"
-// import { Container } from "react-bootstrap";
 
 const JobListing = (props) => {
   return (

@@ -1,7 +1,9 @@
 .jobListing-container {
   padding: 0 10%;
-  background-color: black;
+  background-color:hsl(180, 52%, 96%);
 }
+
+
 
 .jobListing-main{
 padding-top: 2em;

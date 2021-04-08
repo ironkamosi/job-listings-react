@@ -1,15 +1,14 @@
 import { Container, Col, Row } from "react-bootstrap";
-import JobLanguages from "./JobLanguages.jsx";
-import Badge from "./Badge.jsx"
-import JobTools from "./JobTools.jsx";
-import New from "./New.jsx";
+import BadgeContainer from "./BadgeContainer.jsx";
+import Badge from "./Badge.jsx";
+import PillBadge from "./PillBadge.jsx";
 import MiscellaneousInfo from "./MiscellaneousInfo.jsx";
 import "./JobDisplay.css";
 const JobDisplay = ({ jobInfo }) => {
   return (
     <Container className="jobDisplay-Row">
       <Row>
-        <Col xl={1.9}>
+        <Col xl={1.6} className="logo">
           <img
             width={88}
             height={88}
@@ -19,11 +18,11 @@ const JobDisplay = ({ jobInfo }) => {
           />
         </Col>
 
-        <Col xl={4}>
+        <Col xl={4} className="jobDisplay-col2">
           <Row>
             <h3 className="company-name">{jobInfo.company}</h3>{" "}
-            {jobInfo.new && <New text="NEW!" />}
-            {jobInfo.featured && <New text="FEATURE" dark/>}
+            {jobInfo.new && <PillBadge text="NEW!" />}
+            {jobInfo.featured && <PillBadge text="FEATURED" dark />}
           </Row>
 
           <Row>
@@ -34,27 +33,17 @@ const JobDisplay = ({ jobInfo }) => {
             <MiscellaneousInfo data={jobInfo} />
           </Row>
         </Col>
-
-        <Col xl={6}>
+        
+        <Col xl={6} className="jobDisplay-col3">
           <Row className="m-info">
             <Badge text={jobInfo.role} />
-            <Badge text={jobInfo.level}/>
-            {/* <Badge variant="info">{jobInfo.role}</Badge>
-            <Badge variant="info">{jobInfo.level}</Badge> */}
-            <JobLanguages languages={jobInfo.languages} />
-            <JobTools tools={jobInfo.tools} />
+            <Badge text={jobInfo.level} />
+            <BadgeContainer languages={jobInfo.languages} />
           </Row>
+         
         </Col>
       </Row>
     </Container>
   );
 };
 export default JobDisplay;
-
-/* {jobLanguages.map((language, index) => { 
-            return <Badge key={index} variant="info">{language}</Badge>
-          })} */
-
-/* <div>
-          <JobList />
-        </div> */

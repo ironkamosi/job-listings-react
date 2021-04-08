@@ -1,13 +1,36 @@
+.jobDisplay-Row{
+background-color: white;
+border-radius: 10px;
+padding: 2em;
+box-shadow: 5px 10px 18px #888888;
+}
+
+
+.logo{
+margin-left:2.3em;
+}
+
 .job-display {
   align-items: center;
 }
 
-.jobDisplay-col1 {
-  display: flex;
+.jobDisplay-col2 {
+  height: 88px;
+  
+}
+.jobDisplay-col3 {
+ justify-content: flex-end  !important;
+ align-items: center !important;
+
+
+  /* justify-self: end;  */
 }
 
 .m-info {
-  padding-top: 2em;
+  /* padding-top: 2em; */
+display: flex;
+justify-content: flex-end;
+ /* margin-left:  2em!important; */
 }
 
 .job-position{
@@ -19,3 +42,4 @@ color:hsl(180, 14%, 20%);
   font-weight: 700;
   font-size: 1.2em;
 }
+
