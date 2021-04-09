@@ -2,9 +2,6 @@ ul {
   display: flex;
   margin: 0em;
   padding: 0em;
-  /* font-family: 'Spartan', sans-serif;
-  font-size: 15px;
-  font-weight: 500;  */
 }
 
 li {
@@ -17,7 +14,7 @@ li {
 
 .job-position {
   font-family: "Spartan", sans-serif;
-  color: hsl(180, 29%, 50%); 
+  color: hsl(180, 29%, 50%);
   font-weight: 700;
   font-size: 1.3em;
 }

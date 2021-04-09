@@ -1,4 +1,3 @@
-// import { Badge } from "react-bootstrap";
 import "./Feature.css"
 const Featured = ({ featuredJob }) => {
   //   return featuredJob ? (

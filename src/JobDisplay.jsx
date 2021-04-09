@@ -4,9 +4,16 @@ import Badge from "./Badge.jsx";
 import PillBadge from "./PillBadge.jsx";
 import MiscellaneousInfo from "./MiscellaneousInfo.jsx";
 import "./JobDisplay.css";
+
 const JobDisplay = ({ jobInfo }) => {
+  let highlighted = "";
+  if (jobInfo.featured) {
+
+    highlighted= "highlighted"
+    console.log(`highlighted`) 
+  }
   return (
-    <Container className="jobDisplay-Row">
+    <Container className={`jobDisplay-Row ${highlighted}`}>
       <Row>
         <Col xl={1.6} className="logo">
           <img
@@ -30,7 +37,7 @@ const JobDisplay = ({ jobInfo }) => {
           </Row>
 
           <Row>
-            <MiscellaneousInfo data={jobInfo} />
+            <MiscellaneousInfo data={jobInfo} className="m-info-component"/>
           </Row>
         </Col>
         
