@@ -2,7 +2,7 @@
   background-color: hsl(180, 29%, 50%);
   border-radius: 12%;
   margin-left: 1em;
-  border-radius: 999em; /* "pill hack" */
+  border-radius: 999em; 
   margin-bottom: 1rem;
   min-width: 70px;
   /* width: 70px; */
