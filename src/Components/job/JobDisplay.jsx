@@ -1,7 +1,7 @@
 import { Container, Col, Row } from "react-bootstrap";
-import BadgeContainer from "./BadgeContainer.jsx";
-import Badge from "./Badge.jsx";
-import PillBadge from "./PillBadge.jsx";
+import BadgeContainer from "../Badge/BadgeContainer.jsx";
+import Badge from "../Badge/Badge.jsx";
+import PillBadge from "../Badge/PillBadge.jsx";
 import MiscellaneousInfo from "./MiscellaneousInfo.jsx";
 import "./JobDisplay.css";
 

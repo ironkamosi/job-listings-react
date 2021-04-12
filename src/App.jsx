@@ -1,7 +1,7 @@
 import React from "react"
 import './App.css';
-import data from "./data.json"
-import JobListing from "./JobListing.jsx"
+import data from "./data/data.json"
+import JobListing from "./Components/job/JobListing.jsx"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
